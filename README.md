@@ -3,6 +3,8 @@ CUDA & PyTorch Configuration on Windows 10+
 
 ---
 
+<img src="images/Guide-To-Install-CUDA-for GPU-enabled-Deep-Learning-with-PyTorch_fis.png"/>
+
 `Experiments were run on a Windows 11 machine with a 12GB GeForce RTX 3060 GPU, 32 GB RAM, and an i7 10th generation CPU.`
 
 You will need:
@@ -70,7 +72,7 @@ Follow the default configuration to install the toolkit.
 
 Note: Some older versions of the CUDA toolkit don't add CUDA to the environment variables PATH. But for me version 12.1 did. 
 
-### **4.Copy PyTorch cuda install command**
+### **4.Copy PyTorch CUDA install command**
 Link: https://pytorch.org/get-started/locally/
 
 <img src="images/pytorch_locally.png"/>
@@ -81,17 +83,15 @@ Link: https://pytorch.org/get-started/locally/
 
 I had the same questions when CUDA 12.1 was released in April 2023 but it works just fine with PyTorch. You will see by following to the end of this article. 
 
-*First
-
-Run the above command in a (anaconda) virtual environment.
+**Run the above command in a (anaconda) virtual environment.**
 
 ### **5.Run the below in a .py or .ipynb file**
 
-Create a file 'gpucheck.py' 
+a. Create a file 'gpucheck.py' 
 
-Copy and paste the below code into 'gpucheck.py'
+b. Copy and paste the below code into 'gpucheck.py'
 
-Run: `python gpucheck.py` from the command line or run the code in a notebook. 
+c. Run: `python gpucheck.py` from the command line or run the code in a notebook. 
 
 ```python
 # VENV name: cudaconfig
@@ -109,6 +109,8 @@ print("CUDA current device: ", torch.cuda.current_device())
 print("CUDA device name: ", torch.cuda.get_device_name(0))
 # 'NVIDIA GeForce RTX 3060'
 ```
+
+Thanks for reading.
 
 ---
 <!-- DONE -->
